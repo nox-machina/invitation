@@ -1,6 +1,6 @@
 "use client"
 
-import Navbar from "../components/Navbar/Navbar";
+// import Navbar from "../components/Navbar/Navbar";
 import "./globals.css";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { usePathname } from "next/navigation";
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
       </head>
       <ThemeProvider theme={theme}>
         <body>
-          <header>{path == "/auth" ? <></> : <Navbar />}</header>
+          {/* <header>{path == "/auth" ? <></> : <Navbar />}</header> */}
           {children}
         </body>
       </ThemeProvider>
