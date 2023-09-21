@@ -11,6 +11,7 @@ export const Reveal = ({ children, customClass }) => {
   const mainControls = useAnimation();
 
   useEffect(() => {
+    console.log(process.env.VIDEO_URL)
     if(isInView) {
         mainControls.start("visible")
     } else {

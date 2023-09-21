@@ -30,10 +30,7 @@ export default function Home() {
           />
         </video>
         <video autoPlay muted loop className={`${styles["main-video-mobile"]}`}>
-          <source
-            src="https://la-wedding-rsvp.s3.ap-south-1.amazonaws.com/mainvid_compressed_3.mp4"
-            type="video/mp4"
-          />
+          <source src={process.env.NEXT_PUBLIC_VIDEO_URL} type="video/mp4" />
         </video>
         <div className={`${styles["main-section-wrapper"]}`}>
           <Reveal>

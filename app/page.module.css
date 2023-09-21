@@ -56,15 +56,9 @@
     align-items: center;
     flex-direction: column;
     margin: 0;
-    /* background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 1),
-      rgba(10, 10, 10, 0.5),
-      rgba(10, 10, 10, 0.05),
-      rgba(10, 10, 10, 0)
-    ); */
+    z-index: -11;
   }
-
+  
   .main-section-wrapper {
     height: 100%;
     width: 100%;
@@ -76,11 +70,11 @@
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(1px);
   }
-
+  
   .main-video {
     display: none;
   }
-
+  
   .main-video-mobile {
     display: block;
     background-attachment: fixed;
@@ -88,6 +82,7 @@
     top: 0;
     left: 0;
     height: 100%;
+    background-color: rgba(0, 0, 0, 1);
     width: 100%;
     z-index: -10;
     object-fit: cover;
@@ -179,7 +174,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("../public/images/asianlib_mono.jpg");
+    background-image: url("https://la-wedding-rsvp.s3.ap-south-1.amazonaws.com/asianlib_mono.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: 110%;
