@@ -30,6 +30,10 @@ export default function RootLayout({ children }) {
       <head>
         <title>Aaron & Louise</title>
         <meta name="description" content="Wedding Invite" />
+        <meta
+          name="og:image"
+          content="https://la-wedding-rsvp.s3.ap-south-1.amazonaws.com/meta_image.jpg"
+        />
       </head>
       <ThemeProvider theme={theme}>
         <body>

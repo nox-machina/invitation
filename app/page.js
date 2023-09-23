@@ -14,11 +14,17 @@ import {
   notosans,
 } from "../global/fonts";
 import Hanger from "../public/icons/Hanger.js";
-import { motion } from "framer-motion";
-import Border from "@/public/icons/Border";
+import { usePathname } from "next/navigation";
 import { Reveal } from "@/containers/Animation/Reveal";
+import { useEffect } from "react";
 
 export default function Home() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    console.log({ path: pathname });
+  });
+
   return (
     <main className={`${styles.main} ${roboto.className}`}>
       <section className={`${styles["main-section"]}`}>
@@ -44,7 +50,7 @@ export default function Home() {
               <p
                 className={`${styles["main-text-date"]} ${notosans.className}`}
               >
-                14 . 10 . 2023
+                {pathname == "/baroque" ? `18 . 10 . 2023` : `14 . 10 . 2023`}
               </p>
             </div>
           </Reveal>
@@ -88,26 +94,42 @@ export default function Home() {
           <br />
           <Reveal>
             <span className={`${notosans.className}`}>
-              daughter of Mr. Gagnon and Mrs. Girard on Saturday, <br />
-              <span style={{ fontWeight: 500 }}>14th of October, 2023</span>
+              daughter of Mr. Gagnon and Mrs. Girard on {pathname == "/baroque" ? "Wednesday" : "Saturday"}, <br />
+              <span style={{ fontWeight: 500 }}>
+                {pathname == "/baroque" ? `October 18, 2023` : `October 14, 2023`}
+              </span>
             </span>
           </Reveal>
         </div>
       </div>
-      <section className={`${styles["venue-container"]}`}>
+      <section
+        className={
+          pathname == "/baroque"
+            ? `${styles["venue-container-baroque"]}`
+            : `${styles["venue-container"]}`
+        }
+      >
         <div className={`${styles["venue-wrapper"]}`}>
           <div className={`${styles["venue-text-container"]}`}>
             <div className={`${styles["venue-heading"]} ${playfair.className}`}>
               <Reveal>Event Details</Reveal>
             </div>
             <span className={`${styles["venue-text"]} ${notosans.className}`}>
-              <Reveal>14 • 10 • 2023</Reveal>
-
-              <Reveal>Asian Library</Reveal>
-
-              <Reveal>The Landmark Towers</Reveal>
-
-              <Reveal>@19:30hrs (07:30PM IST)</Reveal>
+              {pathname == "/baroque" ? (
+                <>
+                  <Reveal>18 • 10 • 2023</Reveal>
+                  <Reveal>Baroque</Reveal>
+                  <Reveal>Cawnpore Club, Cantonment Road</Reveal>
+                  <Reveal>@19:30hrs (07:30PM IST)</Reveal>
+                </>
+              ) : (
+                <>
+                  <Reveal>14 • 10 • 2023</Reveal>
+                  <Reveal>Asian Library</Reveal>
+                  <Reveal>The Landmark Towers</Reveal>
+                  <Reveal>@19:30hrs (07:30PM IST)</Reveal>
+                </>
+              )}
             </span>
           </div>
         </div>
@@ -132,7 +154,7 @@ export default function Home() {
       </section>
       <section className={`${styles["footer-container"]}`}>
         <div className={`${styles["footer-wrapper"]}`}>
-          <div className={`${styles["footer-text"]} ${playfair.className}`}>
+          <div className={`${styles["footer-text"]} ${notosans.className}`}>
             <Reveal>• We Hope To See You Soon •</Reveal>
           </div>
         </div>
