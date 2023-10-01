@@ -1,22 +1,14 @@
 "use client";
 
 import styles from "./page.module.css";
-import {
-  roboto,
-  inter,
-  playfair,
-  poppins,
-  montserrat,
-  merriweather,
-  zeyada,
-  kaushan,
-  greatvibes,
-  notosans,
-} from "../global/fonts";
+import { roboto, playfair, notosans } from "../global/fonts";
 import Hanger from "../public/icons/Hanger.js";
 import { usePathname } from "next/navigation";
 import { Reveal } from "@/containers/Animation/Reveal";
 import { useEffect } from "react";
+import Invite from "@/components/Invite/Invite";
+import Image from "next/image";
+import { Card, CardContent, CardMedia } from "@mui/material";
 
 export default function Home() {
   const pathname = usePathname();
@@ -31,7 +23,7 @@ export default function Home() {
         <video autoPlay muted loop className={`${styles["main-video"]}`}>
           <source
             // src="https://la-wedding-rsvp.s3.ap-south-1.amazonaws.com/wedding_header_cmp.mp4"
-            src="/videos/wedding_header_cmp.mp4"
+            src="https://la-wedding-rsvp.s3.ap-south-1.amazonaws.com/main-video-cmp.mp4"
             type="video/mp4"
           />
         </video>
@@ -57,51 +49,68 @@ export default function Home() {
         </div>
       </section>
       <div className={`${styles["invite-text-container"]}`}>
-        <Reveal>
-          <div className={`${styles["invite-text-heading"]}`}>
-            <span className={`${playfair.className}`}>
-              Join us on our special day
-            </span>
-          </div>
-        </Reveal>
-        <div className={`${styles["invite-text"]}`}>
-          <Reveal>
-            <span className={`${notosans.className}`}>
-              Dr. and Mrs. Vishwakarma request the pleasure of your company{" "}
-              <br />
-              to celebrate the wedding of their son
-            </span>
-          </Reveal>
-          <br />
-          <br />
-          <Reveal>
-            <span
-              className={`${greatvibes.className}`}
-              style={{ fontSize: "clamp(1.1rem, 6vw, 2.5rem)" }}
-            >
-              Aaron (Akshat) Vishwakarma
-            </span>
-            <br />
-            <span className={`${notosans.className}`}>with</span>{" "}
-            <span
-              className={`${greatvibes.className}`}
-              style={{ fontSize: "clamp(1.1rem, 6vw, 2.5rem)" }}
-            >
-              Louise Qingxin Gagnon
-            </span>
-          </Reveal>
-          <br />
-          <br />
-          <Reveal>
-            <span className={`${notosans.className}`}>
-              daughter of Mr. Gagnon and Mrs. Girard on {pathname == "/baroque" ? "Wednesday" : "Saturday"}, <br />
-              <span style={{ fontWeight: 500 }}>
-                {pathname == "/baroque" ? `October 18, 2023` : `October 14, 2023`}
-              </span>
-            </span>
-          </Reveal>
+        <div className={`${styles["invite-text-sm"]}`}>
+          <Invite />
         </div>
+        {/* <div className={`${styles["invite-text-lg"]}`}>
+          <div className={`${styles["invite-text-background-lg"]}`}></div>
+          <Invite />
+        </div> */}
       </div>
+      <section className={`${styles["details-section"]}`}>
+        <div className={`${styles["details-section-grid"]}`}>
+          <div className={`${styles["venue-image-grid"]}`}>
+            <img
+              className={`${styles["venue-image-grid"]}`}
+              src={
+                pathname == "/baroque"
+                  ? "https://la-wedding-rsvp.s3.ap-south-1.amazonaws.com/baroque.jpg"
+                  : "https://la-wedding-rsvp.s3.ap-south-1.amazonaws.com/asianlib_mono.jpg"
+              }
+            />
+          </div>
+          <div className={`${styles["invite-text-grid"]}`}>
+            <Invite view={"large"} />
+          </div>
+          <div className={`${styles["venue-text-grid"]}`}>
+            {/* <div className={`${styles["venue-text-container"]}`}> */}
+              <div
+                className={`${styles["venue-grid-text-heading"]} ${playfair.className}`}
+              >
+                <Reveal>Event Details</Reveal>
+              </div>
+              <div className={`${styles["venue-text-wrapper"]} ${notosans.className}`}>
+                {pathname == "/baroque" ? (
+                  <>
+                    <Reveal customClass={"text-reveal"}>18 • 10 • 2023</Reveal>
+                    <Reveal customClass={"text-reveal"}>Baroque</Reveal>
+                    <Reveal customClass={"text-reveal"}>Cawnpore Club, Cantonment Road</Reveal>
+                    <Reveal customClass={"text-reveal"}>@19:30hrs (07:30PM IST)</Reveal>
+                  </>
+                ) : (
+                  <>
+                    <Reveal customClass={"text-reveal"}>14 • 10 • 2023</Reveal>
+                    <Reveal customClass={"text-reveal"}>Asian Library</Reveal>
+                    <Reveal customClass={"text-reveal"}>The Landmark Towers</Reveal>
+                    <Reveal customClass={"text-reveal"}>@19:30hrs (07:30PM IST)</Reveal>
+                  </>
+                )}
+              </div>
+            {/* </div> */}
+          </div>
+          <div className={`${styles["dresscode-text-grid"]}`}>
+              <div className={`${styles["dresscode-heading"]} ${playfair.className}`}>
+                <Reveal>What to wear</Reveal>
+              </div>
+              {/* <div> */}
+                <Reveal customClass={"text-reveal"}>
+                  Feel free to wear a fancy -ish outfit of your choosing,
+                  although we would encourage you to go with something black.
+                </Reveal>
+              {/* </div> */}
+          </div>
+        </div>
+      </section>
       <section
         className={
           pathname == "/baroque"
@@ -146,7 +155,7 @@ export default function Home() {
             <div>
               <Reveal>
                 Feel free to wear a fancy -ish outfit of your choosing, although
-                we would encourage you to go with something black and/or white.
+                we would encourage you to go with something black.
               </Reveal>
             </div>
           </div>

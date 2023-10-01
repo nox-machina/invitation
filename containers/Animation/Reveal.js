@@ -28,7 +28,7 @@ export const Reveal = ({ children, customClass }) => {
         }}
         initial="hidden"
         animate={mainControls}
-        className={ customClass ? `${styles[customClass]}` : null}
+        className={ customClass ? `${styles[`${customClass}`]}` : null}
         transition={{ duration: 0.3, delay: 0.2}}
         style={{display: "inline-block"}}
       >

@@ -37,6 +37,6 @@ next-env.d.ts
 /public/videos
 /public/images
 
-/components
+/components/Navbar
 
 .env
