@@ -101,6 +101,7 @@
   justify-content: center;
   align-items: center;
   border-radius: var(--card-border-radius);
+  overflow: hidden;
 }
 
 .invite-text-heading-lg {
@@ -259,6 +260,65 @@
 
 .footer-container {
   display: none;
+}
+
+.footer-grid-container {
+  display: flex;
+  height: 60%;
+  background-color: var(--primary-bg-color);
+}
+
+.fimg-one-container {
+  grid-area: img-1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.fimg-one {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: top;
+}
+
+.fimg-two-container {
+  grid-area: img-2;
+  width: 100%;
+  height: 100%;
+}
+
+.fimg-two {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: top;
+}
+
+.fimg-two-container {
+  grid-area: img-3;
+  width: 100%;
+  height: 100%;
+}
+
+.fimg-three {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: top;
+}
+
+.footer-grid {
+  display: grid;
+  width: 100%;
+  max-width: 100%;
+  grid-template-areas: 
+  "img-1 img-2 img-3";
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  /* align-items: center; */
+  justify-items: center;
+  overflow: hidden;
 }
 
 @media (max-width: 840px) {

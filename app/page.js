@@ -74,40 +74,52 @@ export default function Home() {
           </div>
           <div className={`${styles["venue-text-grid"]}`}>
             {/* <div className={`${styles["venue-text-container"]}`}> */}
-              <div
-                className={`${styles["venue-grid-text-heading"]} ${playfair.className}`}
-              >
-                <Reveal>Event Details</Reveal>
-              </div>
-              <div className={`${styles["venue-text-wrapper"]} ${notosans.className}`}>
-                {pathname == "/baroque" ? (
-                  <>
-                    <Reveal customClass={"text-reveal"}>18 • 10 • 2023</Reveal>
-                    <Reveal customClass={"text-reveal"}>Baroque</Reveal>
-                    <Reveal customClass={"text-reveal"}>Cawnpore Club, Cantonment Road</Reveal>
-                    <Reveal customClass={"text-reveal"}>@19:30hrs (07:30PM IST)</Reveal>
-                  </>
-                ) : (
-                  <>
-                    <Reveal customClass={"text-reveal"}>14 • 10 • 2023</Reveal>
-                    <Reveal customClass={"text-reveal"}>Asian Library</Reveal>
-                    <Reveal customClass={"text-reveal"}>The Landmark Towers</Reveal>
-                    <Reveal customClass={"text-reveal"}>@19:30hrs (07:30PM IST)</Reveal>
-                  </>
-                )}
-              </div>
+            <div
+              className={`${styles["venue-grid-text-heading"]} ${playfair.className}`}
+            >
+              <Reveal>Event Details</Reveal>
+            </div>
+            <div
+              className={`${styles["venue-text-wrapper"]} ${notosans.className}`}
+            >
+              {pathname == "/baroque" ? (
+                <>
+                  <Reveal customClass={"text-reveal"}>18 • 10 • 2023</Reveal>
+                  <Reveal customClass={"text-reveal"}>Baroque</Reveal>
+                  <Reveal customClass={"text-reveal"}>
+                    Cawnpore Club, Cantonment Road
+                  </Reveal>
+                  <Reveal customClass={"text-reveal"}>
+                    @19:30hrs (07:30PM IST)
+                  </Reveal>
+                </>
+              ) : (
+                <>
+                  <Reveal customClass={"text-reveal"}>14 • 10 • 2023</Reveal>
+                  <Reveal customClass={"text-reveal"}>Asian Library</Reveal>
+                  <Reveal customClass={"text-reveal"}>
+                    The Landmark Towers
+                  </Reveal>
+                  <Reveal customClass={"text-reveal"}>
+                    @19:30hrs (07:30PM IST)
+                  </Reveal>
+                </>
+              )}
+            </div>
             {/* </div> */}
           </div>
           <div className={`${styles["dresscode-text-grid"]}`}>
-              <div className={`${styles["dresscode-heading"]} ${playfair.className}`}>
-                <Reveal>What to wear</Reveal>
-              </div>
-              {/* <div> */}
-                <Reveal customClass={"text-reveal"}>
-                  Feel free to wear a fancy -ish outfit of your choosing,
-                  although we would encourage you to go with something black.
-                </Reveal>
-              {/* </div> */}
+            <div
+              className={`${styles["dresscode-heading"]} ${playfair.className}`}
+            >
+              <Reveal>What to wear</Reveal>
+            </div>
+            {/* <div> */}
+            <Reveal customClass={"text-reveal"}>
+              Feel free to wear a fancy -ish outfit of your choosing, although
+              we would encourage you to go with something black.
+            </Reveal>
+            {/* </div> */}
           </div>
         </div>
       </section>
@@ -158,6 +170,28 @@ export default function Home() {
                 we would encourage you to go with something black.
               </Reveal>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className={`${styles["footer-grid-container"]}`}>
+        <div className={`${styles["footer-grid"]}`}>
+          <div className={`${styles["fimage-one-container"]}`}>
+            <img
+              className={`${styles["fimg-one"]}`}
+              src="https://la-wedding-rsvp.s3.ap-south-1.amazonaws.com/goa_d0f9ec.jpg"
+            />
+          </div>
+          <div className={`${styles["fimage-two-container"]}`}>
+            <img
+              className={`${styles["fimg-two"]}`}
+              src="https://la-wedding-rsvp.s3.ap-south-1.amazonaws.com/goa_dbba5c.jpg"
+            />
+          </div>
+          <div className={`${styles["fimage-two-container"]}`}>
+            <img
+              className={`${styles["fimg-three"]}`}
+              src="https://la-wedding-rsvp.s3.ap-south-1.amazonaws.com/goa_f5722e.jpg"
+            />
           </div>
         </div>
       </section>

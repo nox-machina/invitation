@@ -4,6 +4,7 @@
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --primary-bg-color: rgba(255, 255, 255, 1);
   --card-bg-color: rgb(245, 245, 245);
   --card-border-radius: 5px;
 }
@@ -50,18 +51,18 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 0.6rem;
+  width: 0.45rem;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgba(75, 20, 50, 0.85);
+  background-color: rgba(120, 120, 120, 1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(75, 20, 50, 1);
+  background-color: rgba(60, 60, 60, 1);
   border-radius: 50px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(105, 28, 71);
-}
+/* ::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(168, 25, 25);
+} */
