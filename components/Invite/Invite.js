@@ -24,29 +24,30 @@ export default function Invite({view}) {
             to celebrate the wedding of their son
           </span>
         </Reveal>
-        <br />
+        {/* <br /> */}
 
         <Reveal>
           <span
-            className={ view == "large" ? `${notosans.className} ${styles["fancy-text-large"]}` : `${greatvibes.className} ${styles["invite-fancy-text"]}`}
+            className={ view == "large" ? `${notosans.className} ${styles["fancy-text-large"]}` : `${notosans.className} ${styles["invite-fancy-text"]}`}
           >
             Aaron (Akshat) Vishwakarma
           </span>
           {/* <br /> */}
-          <span className={`${notosans.className}`}> with</span>{" "}
+          <span className={`${notosans.className}`} style={{fontSize: "clamp(15px, 1vw, 16px)"}}> with</span>{" "}
           <span
-            className={ view == "large" ? `${notosans.className} ${styles["fancy-text-large"]}` : `${greatvibes.className} ${styles["invite-fancy-text"]}`}
+            className={ view == "large" ? `${notosans.className} ${styles["fancy-text-large"]}` : `${notosans.className} ${styles["invite-fancy-text"]}`}
           >
             Louise Qingxin Gagnon
           </span>
         </Reveal>
-        <br />
+        {/* <br /> */}
         <Reveal customClass={"text-reveal"}>
           <span className={`${notosans.className}`}>
             daughter of Mr. Gagnon and Mrs. Girard on{" "}
-            {pathname == "/baroque" ? "Wednesday" : "Saturday"}, <br />
+            {pathname == "/baroque" ? "Wednesday" : "Saturday"}, 
+            {/* <br /> */}
             <span style={{ fontWeight: 300 }}>
-              {pathname == "/baroque" ? `October 18, 2023` : `October 14, 2023`}
+              {pathname == "/baroque" ? ` October 18, 2023` : ` October 14, 2023`}
             </span>
           </span>
         </Reveal>

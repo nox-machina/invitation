@@ -161,7 +161,9 @@ export default function Home() {
             <Hanger />
           </div>
           <div className={`${styles["theme-text"]} ${notosans.className}`}>
-            <div className={`${styles["color-theme-heading"]}`}>
+            <div
+              className={`${styles["color-theme-heading"]} ${playfair.className}`}
+            >
               <Reveal>What to wear</Reveal>
             </div>
             <div>
@@ -192,13 +194,6 @@ export default function Home() {
               className={`${styles["fimg-three"]}`}
               src="https://la-wedding-rsvp.s3.ap-south-1.amazonaws.com/goa_f5722e.jpg"
             />
-          </div>
-        </div>
-      </section>
-      <section className={`${styles["footer-container"]}`}>
-        <div className={`${styles["footer-wrapper"]}`}>
-          <div className={`${styles["footer-text"]} ${notosans.className}`}>
-            <Reveal>• We Hope To See You Soon •</Reveal>
           </div>
         </div>
       </section>
